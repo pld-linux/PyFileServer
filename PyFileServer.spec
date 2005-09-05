@@ -20,20 +20,33 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-PyFileServer  implements up  to  Class 2  of  the WebDAV  specification,
-including support  for shared and  exclusive write locking,  and setting
-arbitrary dead  properties. It also implements  HTTP user authentication
-using both  basic and digest  schemes, HTTP single range  retrievals and
+PyFileServer implements up to Class 2 of the WebDAV specification,
+including support for shared and exclusive write locking, and setting
+arbitrary dead properties. It also implements HTTP user authentication
+using both basic and digest schemes, HTTP single range retrievals and
 conditional processing headers (If_Match, If_Modified_Since, etc).
 
-PyFileServer also  allows custom  components to  be developed  easily by
+PyFileServer also allows custom components to be developed easily by
 having clear interfaces for:
  - Resource Abstraction Layer
  - Lock Manager
  - Property Manager
  - Domain Controllers
 
-#description -l pl
+%description -l pl
+PyFileSerwer implementuje specyfikacjê WebDAV do klasy 2 w³±cznie,
+wraz z obs³ug± wspó³dzielonych i wy³±cznych blokad zapisu oraz
+ustawianiem dowolnych martwych w³asno¶ci. Implementuje tak¿e
+uwierzytelnianie u¿ytkowników po HTTP przy u¿yciu schematów basic i
+digest, pojedyncze zakresy ¶ci±gania danych po HTTP oraz nag³ówki
+przetwarzania warunkowego (If_Match, If_Modified_Since itp.).
+
+PyFileServer pozwala tak¿e na ³atwe tworzenie w³asnych komponentów
+udostêpniaj±c przejrzyste interfejsy do:
+ - warstwy abstrakcji zasobów (Resource Abstraction Layer)
+ - zarz±dcy blokad (Lock Manager)
+ - zarz±dcy w³asno¶ci (Property Manager)
+ - kontrolerów domen (Domain Controllers)
 
 %prep
 %setup -q -n %{name}
