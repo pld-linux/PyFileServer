@@ -6,7 +6,7 @@ Summary:	A WebDAV server in Python
 Summary(pl):	Serwer WebDAV napisany w Pythonie
 Name:		PyFileServer
 Version:	0.2.1
-Release:	0.1
+Release:	1
 License:	BSD
 Group:		Networking/Daemons
 Source0:	http://download.berlios.de/pyfilesync/PyFileServer-0.2.1.zip
@@ -52,18 +52,20 @@ udostêpniaj±c przejrzyste interfejsy do:
 %setup -q -n %{name}
 
 %build
-%py_comp pyfileserver/
-%py_ocomp pyfileserver/
+python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
+python setup.py install \
+	--single-version-externally-managed \
+	--optimize=2 \
+	--root=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{py_sitescriptdir},%{_bindir}}
 
-cp -r pyfileserver $RPM_BUILD_ROOT%{py_sitescriptdir}
+
+install -d $RPM_BUILD_ROOT%{_bindir}
 echo "#!/usr/bin/python" > $RPM_BUILD_ROOT%{_bindir}/PyFileServer.py
 cat ext_wsgiutils_server.py >> $RPM_BUILD_ROOT%{_bindir}/PyFileServer.py
-
 %py_postclean
 
 %clean
@@ -75,3 +77,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc THANKS.txt TODO.txt TUTORIAL.txt
 %attr(755,root,root) %{_bindir}/*
 %{py_sitescriptdir}/pyfileserver
+%{py_sitescriptdir}/PyFileServer*
