@@ -1,0 +1,25 @@
+--- setup.py.orig	2006-08-12 12:09:21.000000000 +0200
++++ setup.py	2006-08-12 12:09:39.000000000 +0200
+@@ -11,14 +11,14 @@
+ #manual check for dependencies: PyXML - somehow installer unable to find on PyPI.
+ import sys
+ 
+-print "\nChecking manual dependencies...\n"
+-try:
+-   import xml.dom.ext
+-   import xml.dom.ext.reader
+-except ImportError:
+-   print "Failed to detect PyXML. PyXML is required for PyFileServer. Please install"
+-   print "PyXML <http://pyxml.sourceforge.net/> before installing PyFileServer"
+-   sys.exit(-1)
++#print "\nChecking manual dependencies...\n"
++#try:
++#   import xml.dom.ext
++#   import xml.dom.ext.reader
++#except ImportError:
++#   print "Failed to detect PyXML. PyXML is required for PyFileServer. Please install"
++#   print "PyXML <http://pyxml.sourceforge.net/> before installing PyFileServer"
++#   sys.exit(-1)
+ 
+ 
+ from setuptools import setup, find_packages

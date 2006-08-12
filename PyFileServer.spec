@@ -1,7 +1,3 @@
-#
-# TODO:
-# - check if PyXML is really required during build
-#
 Summary:	A WebDAV server in Python
 Summary(pl):	Serwer WebDAV napisany w Pythonie
 Name:		PyFileServer
@@ -12,6 +8,7 @@ Group:		Networking/Daemons
 Source0:	http://download.berlios.de/pyfilesync/PyFileServer-0.2.1.zip
 # Source0-md5:	7a46d3f94e05d81b4110e6d0780c642b
 URL:		http://pyfilesync.berlios.de/pyfileserver.html
+Patch0:		%{name}-setup_py.patch
 BuildRequires:	python >= 2.3
 BuildRequires:	python-setuptools
 BuildRequires:	unzip
@@ -51,6 +48,7 @@ udostêpniaj±c przejrzyste interfejsy do:
 
 %prep
 %setup -q -n %{name}
+%patch0
 
 %build
 python setup.py build
