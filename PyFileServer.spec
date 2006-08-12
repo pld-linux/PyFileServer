@@ -13,6 +13,7 @@ Source0:	http://download.berlios.de/pyfilesync/PyFileServer-0.2.1.zip
 # Source0-md5:	7a46d3f94e05d81b4110e6d0780c642b
 URL:		http://pyfilesync.berlios.de/pyfileserver.html
 BuildRequires:	python >= 2.3
+BuildRequires:	python-setuptools
 BuildRequires:	unzip
 %pyrequires_eq	python-modules
 Requires:	python-PyXML
