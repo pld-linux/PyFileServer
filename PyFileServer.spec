@@ -1,5 +1,5 @@
 Summary:	A WebDAV server in Python
-Summary(pl.UTF-8):   Serwer WebDAV napisany w Pythonie
+Summary(pl.UTF-8):	Serwer WebDAV napisany w Pythonie
 Name:		PyFileServer
 Version:	0.2.1
 Release:	1
