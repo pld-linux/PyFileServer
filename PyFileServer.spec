@@ -1,5 +1,5 @@
 Summary:	A WebDAV server in Python
-Summary(pl):	Serwer WebDAV napisany w Pythonie
+Summary(pl.UTF-8):   Serwer WebDAV napisany w Pythonie
 Name:		PyFileServer
 Version:	0.2.1
 Release:	1
@@ -31,20 +31,20 @@ having clear interfaces for:
  - Property Manager
  - Domain Controllers
 
-%description -l pl
-PyFileSerwer implementuje specyfikacjê WebDAV do klasy 2 w³±cznie,
-wraz z obs³ug± wspó³dzielonych i wy³±cznych blokad zapisu oraz
-ustawianiem dowolnych martwych w³asno¶ci. Implementuje tak¿e
-uwierzytelnianie u¿ytkowników po HTTP przy u¿yciu schematów basic i
-digest, pojedyncze zakresy ¶ci±gania danych po HTTP oraz nag³ówki
+%description -l pl.UTF-8
+PyFileSerwer implementuje specyfikacjÄ™ WebDAV do klasy 2 wÅ‚Ä…cznie,
+wraz z obsÅ‚ugÄ… wspÃ³Å‚dzielonych i wyÅ‚Ä…cznych blokad zapisu oraz
+ustawianiem dowolnych martwych wÅ‚asnoÅ›ci. Implementuje takÅ¼e
+uwierzytelnianie uÅ¼ytkownikÃ³w po HTTP przy uÅ¼yciu schematÃ³w basic i
+digest, pojedyncze zakresy Å›ciÄ…gania danych po HTTP oraz nagÅ‚Ã³wki
 przetwarzania warunkowego (If_Match, If_Modified_Since itp.).
 
-PyFileServer pozwala tak¿e na ³atwe tworzenie w³asnych komponentów
-udostêpniaj±c przejrzyste interfejsy do:
- - warstwy abstrakcji zasobów (Resource Abstraction Layer)
- - zarz±dcy blokad (Lock Manager)
- - zarz±dcy w³asno¶ci (Property Manager)
- - kontrolerów domen (Domain Controllers)
+PyFileServer pozwala takÅ¼e na Å‚atwe tworzenie wÅ‚asnych komponentÃ³w
+udostÄ™pniajÄ…c przejrzyste interfejsy do:
+ - warstwy abstrakcji zasobÃ³w (Resource Abstraction Layer)
+ - zarzÄ…dcy blokad (Lock Manager)
+ - zarzÄ…dcy wÅ‚asnoÅ›ci (Property Manager)
+ - kontrolerÃ³w domen (Domain Controllers)
 
 %prep
 %setup -q -n %{name}
