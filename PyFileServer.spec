@@ -51,11 +51,11 @@ udostępniając przejrzyste interfejsy do:
 %patch0
 
 %build
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-python setup.py install \
+%py_install \
 	--single-version-externally-managed \
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
